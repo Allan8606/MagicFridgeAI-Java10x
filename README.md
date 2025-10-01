@@ -9,10 +9,8 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
-- [Estrutura do Projeto](#estrutura-do-projeto)
 - [Rodando o Projeto](#rodando-o-projeto)
 - [Contribuições](#contribuições)
-- [Licença](#licença)
 
 ## Descrição do Projeto
 
@@ -30,14 +28,27 @@ O principal objetivo deste projeto é permitir que o usuário, com base nos ingr
 
 ## Tecnologias Utilizadas
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+Este projeto foi desenvolvido utilizando as seguintes tecnologias e dependências:
 
-- **Java**: Linguagem de programação principal.
-- **Spring Boot**: Framework utilizado para o desenvolvimento da aplicação web.
-- **API Gemini**: Utilizada para gerar receitas a partir dos ingredientes cadastrados pelo usuário.
-- **Maven**: Ferramenta de automação de builds e gerenciamento de dependências.
-- **MySQL**: Banco de dados utilizado para armazenar os alimentos e receitas.
-- **JPA (Java Persistence API)**: Para interação com o banco de dados.
+- **Java 17**: A versão do Java utilizada para o desenvolvimento.
+- **Spring Boot 3.5.6**: Framework para desenvolvimento de aplicações Java baseadas em microserviços.
+  - **spring-boot-starter-web**: Para desenvolvimento de APIs RESTful.
+  - **spring-boot-starter-data-jpa**: Para interação com bancos de dados usando JPA (Java Persistence API).
+  - **spring-boot-starter-webflux**: Para suporte a APIs reativas.
+  - **spring-boot-devtools**: Para facilitar o desenvolvimento com recarregamento automático.
+  - **spring-boot-starter-test**: Para realizar testes unitários e de integração.
+- **Google Gemini (google-genai)**: Utilizado para geração de receitas através da API **Google GenAI**.
+- **H2 Database**: Banco de dados em memória para testes (pode ser substituído por um banco de dados real como MySQL ou PostgreSQL).
+- **Flyway**: Para gerenciamento de migrações de banco de dados.
+- **Lombok**: Para simplificar o código, gerando automaticamente getters, setters, e construtores.
+- **Reactor-Test**: Ferramentas para teste de código reativo, utilizadas com o **spring-boot-starter-webflux**.
+
+## Dependências e Plugins do Maven
+
+- **Maven Compiler Plugin**: Para compilar o código-fonte e garantir compatibilidade com a versão do Java.
+- **Spring Boot Maven Plugin**: Para empacotar e executar o aplicativo Spring Boot.
+
+Essas dependências e tecnologias ajudam a criar um sistema robusto, eficiente e fácil de manter.
 
 
 ## Pré-requisitos
