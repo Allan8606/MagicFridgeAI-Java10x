@@ -1,7 +1,6 @@
 package allan.dev.MagicFridgeAI.config;
 
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -9,8 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${google.api.key: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent}")
-    private String apiUrl;
+    private String apiUrl = "https://generativelanguage.googleapis.com/";
 
     @Bean
     public WebClient webClient(WebClient.Builder builder) {

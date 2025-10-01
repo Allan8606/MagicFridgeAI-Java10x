@@ -37,7 +37,7 @@ public class FoodItemController {
         FoodItem item = foodItemService.listarPorId(id);
 
         if (item != null){
-            return ResponseEntity.ok("Item encontrado: " + item.getName());
+            return ResponseEntity.ok("Item encontrado: " + item.getNome());
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item não encontrado");
 
@@ -50,7 +50,7 @@ public class FoodItemController {
         FoodItem atualizado = foodItemService.alterar(foodItem, id);
 
         if (atualizado != null){
-            return ResponseEntity.ok("Item atualizado: " + atualizado.getName());
+            return ResponseEntity.ok("Item atualizado: " + atualizado.getNome());
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item não encontrado");
         }
